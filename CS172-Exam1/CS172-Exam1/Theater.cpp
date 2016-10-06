@@ -10,9 +10,10 @@
 #include <cstdlib>
 #include <stdio.h>
 #include <string>
-using namespace std;
 #include "Theater.hpp"
-#include "Movie.hpp"
+//#include "Movie.hpp"
+using namespace std;
+
 Theater::Theater(string Name, string Phone)
 {
     
@@ -21,15 +22,15 @@ Theater::Theater(string Name, string Phone)
 
 void AddMovie(Movie& Movie)
 {
-    
+    Movie.Movie();
 }
 //Add a movie at a specific time
 
 // returns the movie shown at or after the given hour
 // returns a blank string if there are none upcoming
-string GetMovieForHour(int Hour)
+string Theater::GetMovieForHour(int Hour)
 {
-    for(int i=0; i<Hour.length(); i++)
+    /*for(int i=0; i<Hour.length(); i++)
     {
         
     }
@@ -38,24 +39,27 @@ string GetMovieForHour(int Hour)
     mov=m;
         
     return mov;
+     */
 }
 
 int Theater::GetShowTimeForGenre(string Genre);
 {
-    
+    return Genre;
 }
 //When will the movie of the given genre be shown?
 //   Return -1 if none exist
 
+// returns the price of popcorn
 int Theater::GetPopcornPrice()
 {
-    
+    return PopcornPrice;
 }
 //Make up a cost in dollars for popcorn
 
+// returns the price of coke
 int Theater::GetCokePrice()
 {
-    
+    return CokePrice;
 }
 //Make up a cost on Coke
 

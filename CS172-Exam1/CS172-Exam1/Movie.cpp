@@ -10,15 +10,15 @@
 #include <cstdlib>
 #include <string>
 #include "Movie.hpp"
-#include "Theater.hpp"
+//#include "Theater.hpp"
 using namespace std;
 
 
-Movie::Movie()
+/*Movie::Movie()
 {
     
 }
-
+*/
 Movie::Movie(string Title, string Genre, int ShowTime)
 {
     
@@ -26,17 +26,17 @@ Movie::Movie(string Title, string Genre, int ShowTime)
 
 string Movie::GetTitle()
 {
-    
+    return Title;
 }
 
 string Movie::GetGenre()
 {
-    
+    return Genre;
 }
 
 int Movie::GetShowtime()
 {
-    
+    return ShowTime;
 }
 
 
