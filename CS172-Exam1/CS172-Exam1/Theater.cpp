@@ -5,13 +5,14 @@
 //  Created by Heidi Wiebers on 10/6/16.
 //  Copyright © 2016 Heidi Wiebers. All rights reserved.
 //
+//I affirm that all code given below was written solely by me, Heidi Wiebers, and that any help I received adhered to the rules stated for this exam.
 #include <iostream>
 #include <cstdlib>
 #include <stdio.h>
 #include <string>
 using namespace std;
 #include "Theater.hpp"
-
+#include "Movie.hpp"
 Theater::Theater(string Name, string Phone)
 {
     
@@ -24,12 +25,20 @@ void AddMovie(Movie& Movie)
 }
 //Add a movie at a specific time
 
+// returns the movie shown at or after the given hour
+// returns a blank string if there are none upcoming
 string GetMovieForHour(int Hour)
 {
+    for(int i=0; i<Hour.length(); i++)
+    {
+        
+    }
     
+    string mov;
+    mov=m;
+        
+    return mov;
 }
-// Return the movie shown at or after the given hour
-//   Return "" if none are upcoming
 
 int Theater::GetShowTimeForGenre(string Genre);
 {

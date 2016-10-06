@@ -10,14 +10,15 @@
 #include <cstdlib>
 #include <string>
 #include "Movie.hpp"
+#include "Theater.hpp"
 using namespace std;
 
-//int TitleDearJohn();
+
 Movie::Movie()
 {
     
 }
-//int GenreAction;
+
 Movie::Movie(string Title, string Genre, int ShowTime)
 {
     

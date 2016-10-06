@@ -14,6 +14,7 @@
 #include <cstdlib>
 #include <string>
 #include <stdio.h>
+#include "Theater.hpp"
 using namespace std;
 
 class Movie
@@ -24,9 +25,7 @@ private:
     int ShowTime;
     
 public:
-    //int TitleDearJohn();
     Movie();
-    //int GenreAction;
     Movie(string Title, string Genre, int ShowTime);
     string GetTitle();
     string GetGenre();
