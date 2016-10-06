@@ -19,21 +19,25 @@ using namespace std;
     
 }
 */
+
 Movie::Movie(string Title, string Genre, int ShowTime)
 {
-    
+    //MovieListing = Title;
 }
 
+// returns the title of the movie being called
 string Movie::GetTitle()
 {
     return Title;
 }
 
+// returns the genre of the movie being called
 string Movie::GetGenre()
 {
     return Genre;
 }
 
+// returns the showtime of the movie being called
 int Movie::GetShowtime()
 {
     return ShowTime;

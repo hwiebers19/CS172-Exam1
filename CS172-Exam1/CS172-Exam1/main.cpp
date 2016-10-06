@@ -25,11 +25,13 @@ int main() {
         Movie("Monte Python's Meaning of Life", "Comedy", 19), Movie("Jaws", "Horror", 21),
         Movie("Usual Suspects", "Action", 23),
     };
+    // use a for loop to ask the theater what the movie is that is playing at a certain time
     Theater garland("The Garland", "509-327-2509");
     for (int m = 0; m < MOVIECOUNT; m++) {
         garland.AddMovie(movieListing[m]);
     }
     int errors = 0;
+    // use if statements to check if there is a movie at the time entered and output whether ther is or if there is an error with the time enetered
     if (garland.GetMovieForHour(-1) != "") {
         errors++;
         cout << "error: not handling -1 correctly\n";

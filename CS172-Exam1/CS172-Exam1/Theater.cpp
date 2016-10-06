@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <string>
 #include "Theater.hpp"
-//#include "Movie.hpp"
+#include "Movie.hpp"
 using namespace std;
 
 Theater::Theater(string Name, string Phone)
@@ -20,9 +20,10 @@ Theater::Theater(string Name, string Phone)
 }
 //The name for this theater
 
-void AddMovie(Movie& Movie)
+void Theater::AddMovie(Movie & Movie)
 {
-    Movie.Movie();
+   // Movie.Movie();
+    return 
 }
 //Add a movie at a specific time
 
@@ -30,7 +31,7 @@ void AddMovie(Movie& Movie)
 // returns a blank string if there are none upcoming
 string Theater::GetMovieForHour(int Hour)
 {
-    /*for(int i=0; i<Hour.length(); i++)
+/*for(int i=0; i<Hour.length(); i++)
     {
         
     }
@@ -39,11 +40,22 @@ string Theater::GetMovieForHour(int Hour)
     mov=m;
         
     return mov;
-     */
+*/
+//h = Hour;
+//return h;
+    //int h=0;
+    //Hour= h
+    return Hour;
 }
 
 int Theater::GetShowTimeForGenre(string Genre);
 {
+    /*if (genre = comidy)
+    {
+        cout << "";
+    }
+    */
+       
     return Genre;
 }
 //When will the movie of the given genre be shown?
@@ -52,6 +64,7 @@ int Theater::GetShowTimeForGenre(string Genre);
 // returns the price of popcorn
 int Theater::GetPopcornPrice()
 {
+    PopcornPrice=0;
     return PopcornPrice;
 }
 //Make up a cost in dollars for popcorn
@@ -59,6 +72,7 @@ int Theater::GetPopcornPrice()
 // returns the price of coke
 int Theater::GetCokePrice()
 {
+    CokePrice=0;
     return CokePrice;
 }
 //Make up a cost on Coke

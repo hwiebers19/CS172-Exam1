@@ -21,15 +21,17 @@ private:
     string Name;
     string Phone;
     int Hour;
-    string Gnere;
+    //string Gnere;
     int ShowTimeForGenre;
     int PopcornPrice;
     int CokePrice;
     
     
 public:
+    //Movie();
     //creates a movie theater with the given name and phone number.
-    Theater(string Name, string Phone); //The name for this theater
+    Theater(string Name, string Phone);
+    //The name for this theater
     void AddMovie(Movie& Movie);
     //Add a movie at a specific time
     // returns the movie of the hour in question
