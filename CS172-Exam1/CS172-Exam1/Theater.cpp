@@ -16,14 +16,19 @@ using namespace std;
 
 Theater::Theater(string Name, string Phone)
 {
-    
+    name = Name;
+    phone = Phone;
+    PopcornPrice = 6;
+    CokePrice = 2;
 }
 //The name for this theater
 
 void Theater::AddMovie(Movie & Movie)
 {
    // Movie.Movie();
-    return 
+    static int i = 0;
+    MovieList[i] = Movie;
+    i++;
 }
 //Add a movie at a specific time
 
@@ -45,7 +50,25 @@ string Theater::GetMovieForHour(int Hour)
 //return h;
     //int h=0;
     //Hour= h
-    return Hour;
+    string Movie;
+    if(Hour < 0 || Hour > 24)
+    {
+        return "";
+    }
+    for(int i = 0; i < HOURS; i ++)
+    {
+        if(MovieList[i].GetShowtime() >= hour)
+        {
+            Movie = MovieList[i].GetTitle();
+            return movie;
+        }
+        else
+        {
+            Movie = "";
+        }
+    }
+    return Movie;
+    
 }
 
 int Theater::GetShowTimeForGenre(string Genre);
@@ -55,8 +78,9 @@ int Theater::GetShowTimeForGenre(string Genre);
         cout << "";
     }
     */
-       
-    return Genre;
+    //Genre(i);
+    //return Genre;
+    return -1;
 }
 //When will the movie of the given genre be shown?
 //   Return -1 if none exist
