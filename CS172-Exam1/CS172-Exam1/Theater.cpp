@@ -10,27 +10,35 @@
 #include <cstdlib>
 #include <stdio.h>
 #include <string>
+#include <iomanip>
+#include <vector>
 #include "Theater.hpp"
 #include "Movie.hpp"
 using namespace std;
+double m=0;
+Movie movieListing[m];
 
+Theater::Theater()
+{
+    
+}
+// initializes the name,  the phone number, the popcorn and coke price
 Theater::Theater(string Name, string Phone)
 {
-    name = Name;
-    phone = Phone;
+    Name = Name;
+    Phone = Phone;
     PopcornPrice = 6;
     CokePrice = 2;
 }
-//The name for this theater
 
-void Theater::AddMovie(Movie & Movie)
+//Add a movie at a specific time
+void Theater::AddMovie(Movie const& Movie)
 {
    // Movie.Movie();
     static int i = 0;
-    MovieList[i] = Movie;
+    movieListing[m] = Movie;
     i++;
 }
-//Add a movie at a specific time
 
 // returns the movie shown at or after the given hour
 // returns a blank string if there are none upcoming
@@ -55,12 +63,12 @@ string Theater::GetMovieForHour(int Hour)
     {
         return "";
     }
-    for(int i = 0; i < HOURS; i ++)
+    for(int m = 0; m < Hour; m ++)
     {
-        if(MovieList[i].GetShowtime() >= hour)
+        if(movieListing[m].GetShowtime() >= Hour)
         {
-            Movie = MovieList[i].GetTitle();
-            return movie;
+            Movie = movieListing[m].GetTitle();
+            return Movie;
         }
         else
         {
@@ -71,35 +79,35 @@ string Theater::GetMovieForHour(int Hour)
     
 }
 
-int Theater::GetShowTimeForGenre(string Genre);
+// returns when the movie of the given genre will show
+// returns -1 if none exist
+int Theater::GetShowTimeForGenre(string Genre)
 {
-    /*if (genre = comidy)
+    for(int i = 0; i < Hour; i ++)
     {
-        cout << "";
+        if(movieListing[i].GetGenre() == Genre)
+        {
+            return movieListing[i].GetShowTime();
+        }
+        else
+        {
+            return -1;
+        }
     }
-    */
-    //Genre(i);
-    //return Genre;
-    return -1;
 }
-//When will the movie of the given genre be shown?
-//   Return -1 if none exist
 
 // returns the price of popcorn
 int Theater::GetPopcornPrice()
 {
-    PopcornPrice=0;
     return PopcornPrice;
 }
-//Make up a cost in dollars for popcorn
 
 // returns the price of coke
 int Theater::GetCokePrice()
 {
-    CokePrice=0;
     return CokePrice;
 }
-//Make up a cost on Coke
+
 
 
 

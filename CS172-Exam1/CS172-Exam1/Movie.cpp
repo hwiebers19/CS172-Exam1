@@ -8,21 +8,25 @@
 //I affirm that all code given below was written solely by me, Heidi Wiebers, and that any help I received adhered to the rules stated for this exam.
 #include <iostream>
 #include <cstdlib>
+#include <iomanip>
 #include <string>
+#include <vector>
 #include "Movie.hpp"
 //#include "Theater.hpp"
 using namespace std;
 
 
-/*Movie::Movie()
+Movie::Movie()
 {
     
 }
-*/
 
+// initalizes the title, genre, and show time
 Movie::Movie(string Title, string Genre, int ShowTime)
 {
-    //MovieListing = Title;
+    Title=Title;
+    Genre=Genre;
+    movieListing[]=Title;
 }
 
 // returns the title of the movie being called

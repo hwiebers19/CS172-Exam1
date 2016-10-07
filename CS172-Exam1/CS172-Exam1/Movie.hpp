@@ -10,9 +10,12 @@
 
 #ifndef Movie_hpp
 #define Movie_hpp
+
 #include <iostream>
 #include <cstdlib>
+#include <iomanip>
 #include <string>
+#include <vector>
 #include <stdio.h>
 #include "Theater.hpp"
 using namespace std;
@@ -26,9 +29,13 @@ private:
     
 public:
     Movie();
+    // initalizes the title, genre and show times
     Movie(string Title, string Genre, int ShowTime);
+    // returns the title
     string GetTitle();
+    // returns the genre
     string GetGenre();
+    // returns the show time
     int GetShowtime();
 };
 

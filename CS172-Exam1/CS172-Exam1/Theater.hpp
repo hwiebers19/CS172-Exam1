@@ -8,10 +8,13 @@
 //I affirm that all code given below was written solely by me, Heidi Wiebers, and that any help I received adhered to the rules stated for this exam.
 #ifndef Theater_hpp
 #define Theater_hpp
+
 #include <iostream>
 #include <cstdlib>
 #include <stdio.h>
 #include <string>
+#include <iomanip>
+#include <vector>
 #include "Movie.hpp"
 using namespace std;
 
@@ -21,29 +24,27 @@ private:
     string Name;
     string Phone;
     int Hour;
-    //string Gnere;
     int ShowTimeForGenre;
     int PopcornPrice;
     int CokePrice;
     
     
 public:
-    //Movie();
+    
+    Theater();
     //creates a movie theater with the given name and phone number.
     Theater(string Name, string Phone);
     //The name for this theater
-    void AddMovie(Movie& Movie);
+    void AddMovie(Movie const& Movie);
     //Add a movie at a specific time
     // returns the movie of the hour in question
-    string GetMovieForHour(int Hour); //Return the movie shown at or after the given hour
-    //   Return "" if none are upcoming
+    string GetMovieForHour(int Hour);
     // returns the show times for the genre in question
-    int GetShowTimeForGenre(string Genre);//When will the movie of the given genre be shown?
-    //   Return -1 if none exist
+    int GetShowTimeForGenre(string Genre);
     // returns the popcorn prices
-    int GetPopcornPrice(); //Make up a cost in dollars for popcorn
+    int GetPopcornPrice();
     // returns the coke prices
-    int GetCokePrice(); //Make up a cost on Coke
+    int GetCokePrice();
 };
 
 
